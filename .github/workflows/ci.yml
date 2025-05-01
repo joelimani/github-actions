@@ -28,6 +28,9 @@ jobs:
       with:
         distribution: 'temurin'
         java-version: '11'
+    - name: Remove Gradle caches
+      run: rm -rf ~/.gradle/caches
+
     # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
     # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
     - name: Setup Gradle
